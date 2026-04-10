@@ -89,7 +89,7 @@ describe('Validation Module - Initialize BVN Consent (POST /verification/bvn/:bv
         `  ${testData.valid.bvn.standard}  `,
         testData.valid.contact.phone
       );
-      expect(response.status).toContain(500);
+      expect(response.status).toBe(500);
       expect(response.data).toHaveProperty('message');
     });
 

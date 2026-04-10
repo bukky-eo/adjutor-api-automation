@@ -1,15 +1,10 @@
 const axios = require('axios');
 require('dotenv').config();
 
-if (!process.env.API_KEY) {
-  console.error('ERROR: API_KEY is not set in .env file');
-  process.exit(1);
-}
-
 if (!process.env.BASE_URL) {
   console.warn('WARNING: BASE_URL not set, using default');
+  process.env.BASE_URL = 'https://adjutor.lendsqr.com/v2/';
 }
-
 class AdjutorAPIClient {
   constructor() {
     this.client = axios.create({

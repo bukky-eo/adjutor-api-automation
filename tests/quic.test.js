@@ -17,9 +17,9 @@ async function quickTest() {
   console.log('Response:', JSON.stringify(response.data, null, 2));
   
   if (response.status === 200) {
-    console.log('\n✅ Success! API is working correctly');
+    console.log('Success! API is working correctly');
   } else {
-    console.log('\n❌ Failed. Check your API key and BVN');
+    console.log('Failed. Check your API key and BVN');
   }
 }
 
