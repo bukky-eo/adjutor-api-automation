@@ -1,33 +1,40 @@
-# Adjutor API Automation - Capital Credit Limited
+# Adjutor API Automation
 
-## Overview
-Automated test scripts for Lendsqr Adjutor API's Nigerian Country Specific endpoints.
+> Automated API tests for Lendsqr Adjutor's Nigerian country-specific endpoints (Karma, BVN, NIN, Credit Bureaus, Direct Debit, Decisioning).
+
+## Table of Contents
+- [Tech Stack](#tech-stack)
+- [Test Coverage](#test-coverage)
+- [Setup](#setup)
+- [Running Tests Locally](#running-tests-locally)
+- [CI/CD with GitHub Actions](#cicd-with-github-actions)
+- [Project Structure](#project-structure)
+- [Contributing](#contributing)
+
+## Tech Stack
+- Node.js v20+
+- Jest (testing framework)
+- Axios (HTTP client)
+- GitHub Actions (CI)
 
 ## Test Coverage
-
 | Module | Endpoints | Test Cases |
-|--------|-----------|------------|
+|--------|-----------|-------------|
 | Validation NG | Karma, BVN Consent, NIN Verification | 9 |
 | Credit Bureaus NG | CRC, FirstCentral | 4 |
 | Direct Debit NG | Banks, Mandate, Transactions | 9 |
 | Decisioning NG | Models, Borrower Scoring | 4 |
 | **Total** | **10+ endpoints** | **26** |
 
-## Setup Instructions
+## Setup
 
 ### Prerequisites
-- Node.js v16+
-- npm v8+
+- Node.js v20+
+- npm v10+
 
 ### Installation
 
 ```bash
-# Clone repository
-git clone https://github.com/bukky_eo/adjutor-automation.git
-cd adjutor-automation
-
-# Install dependencies
+git clone https://github.com/bukky-eo/adjutor-api-automation.git
+cd adjutor-api-automation
 npm install
-
-# Create .env file
-cp .env.example .env

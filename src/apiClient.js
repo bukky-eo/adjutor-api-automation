@@ -1,10 +1,12 @@
 const axios = require('axios');
 require('dotenv').config();
 
-if (!process.env.BASE_URL) {
-  console.warn('WARNING: BASE_URL not set, using default');
-  process.env.BASE_URL = 'https://adjutor.lendsqr.com/v2/';
-}
+const BASE_URL = process.env.BASE_URL;
+const API_KEY = process.env.API_KEY;
+
+if (!BASE_URL) throw new Error('BASE_URL environment variable is required');
+if (!API_KEY) throw new Error('API_KEY environment variable is required');
+
 class AdjutorAPIClient {
   constructor() {
     this.client = axios.create({
