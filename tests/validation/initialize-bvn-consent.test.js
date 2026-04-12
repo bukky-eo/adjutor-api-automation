@@ -46,7 +46,7 @@ describe('Validation Module - Initialize BVN Consent (POST /verification/bvn/:bv
         expect(response.status).toBe(500);
         expect(response.data).toHaveProperty('message');
 
-        //Any bvn even invalid returns 200
+        //Any bvn even invalid returns 200, this is an error in the API. It should return 500 for invalid BVN
       }
     );
 

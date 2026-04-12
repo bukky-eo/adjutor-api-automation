@@ -1,4 +1,4 @@
-const AdjutorAPIClient = require('../../apiClient');
+const AdjutorAPIClient = require('../../src/apiClient');
 const testData = require('../fixtures/validation-test-data');
 
 describe('Validation Module - Complete BVN Consent', () => {
@@ -6,6 +6,11 @@ describe('Validation Module - Complete BVN Consent', () => {
 
   beforeAll(() => {
     apiClient = new AdjutorAPIClient();
+    retryHandler = new RetryHandler({
+      maxRetries: testConfig.api.retryAttempts,
+      baseDelay: testConfig.api.retryDelay
+    });
+    rateLimiter = retryHandler.createRateLimiter(testConfig.rateLimit.requestsPerSecond);
   });
 
   describe('Positive Test Cases', () => {

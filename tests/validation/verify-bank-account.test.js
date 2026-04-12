@@ -1,4 +1,4 @@
-const AdjutorAPIClient = require('../../apiClient');
+const AdjutorAPIClient = require('../../src/apiClient');
 const APIHelper = require('../utils/api-helper');
 const testConfig = require('../config/test.config');
 const testData = require('../fixtures/validation-test-data');
