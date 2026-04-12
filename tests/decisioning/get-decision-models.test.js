@@ -1,6 +1,6 @@
 const AdjutorAPIClient = require('../../src/apiClient');
-const APIHelper = require('../utils/api-helper');
-const testConfig = require('../config/test.config');
+const APIHelper = require('../../src/utils/api-helper');
+const testConfig = require('../../src/config/test.config');
 
 describe('Decisioning Module - Get Decision Models (GET /decisioning/models)', () => {
   let apiClient;

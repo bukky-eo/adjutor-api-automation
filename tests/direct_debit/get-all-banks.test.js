@@ -1,7 +1,6 @@
 const AdjutorAPIClient = require('../../src/apiClient');
-const APIHelper = require('../utils/api-helper');
-const testConfig = require('../config/test.config');
-const testData = require('../fixtures/direct-debit-test-data');
+const APIHelper = require('../../src/utils/api-helper');
+const testData = require('../../fixtures/direct-debit-test-data');
 
 describe('Direct Debit Module - Get All Banks (GET /direct-debit/banks)', () => {
   let apiClient;

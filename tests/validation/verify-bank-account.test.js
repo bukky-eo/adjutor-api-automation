@@ -1,7 +1,6 @@
 const AdjutorAPIClient = require('../../src/apiClient');
-const APIHelper = require('../utils/api-helper');
-const testConfig = require('../config/test.config');
-const testData = require('../fixtures/validation-test-data');
+const APIHelper = require('../../src/utils/api-helper');
+const testData = require('../../fixtures/validation-test-data');
 
 describe('Validation Module - Verify Bank Account (POST /verification/bankaccount/bvn)', () => {
   let apiClient;

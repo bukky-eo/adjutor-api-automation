@@ -1,8 +1,7 @@
 const AdjutorAPIClient = require('../../src/apiClient');
-const APIHelper = require('../utils/api-helper');
-const RetryHandler = require('../utils/retry-handler');
-const testConfig = require('../config/test.config');
-const testData = require('../fixtures/direct-debit-test-data');
+const RetryHandler = require('../../src/utils/retry-handler');
+const APIHelper = require('../../src/utils/api-helper');
+const testData = require('../../fixtures/direct-debit-test-data');
 
 describe('Direct Debit Module - Create Mandate (POST /direct-debit/mandates)', () => {
   let apiClient;

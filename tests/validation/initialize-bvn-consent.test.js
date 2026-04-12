@@ -1,8 +1,7 @@
 const AdjutorAPIClient = require('../../src/apiClient');
-const APIHelper = require('../utils/api-helper');
-const RetryHandler = require('../utils/retry-handler');
-const testConfig = require('../config/test.config');
-const testData = require('../fixtures/validation-test-data');
+const RetryHandler = require('../../src/utils/retry-handler');
+const APIHelper = require('../../src/utils/api-helper');
+const testData = require('../../fixtures/validation-test-data');
 
 describe('Validation Module - Initialize BVN Consent (POST /verification/bvn/:bvn)', () => {
   let apiClient;
